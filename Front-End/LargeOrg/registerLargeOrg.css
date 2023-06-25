@@ -1,0 +1,171 @@
+/* CSS code for registerAssociation.html */
+
+/* Body styles */
+body::before {
+  content: "";
+  position: fixed; /* Change to fixed position to cover the entire viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Update to 100% to cover the entire page */
+  background-image: url("../Images/giveuslogo.jpg");
+  background-size: 100; /* Use 'cover' to scale and cover the entire background */
+  background-position: center top;
+  mix-blend-mode: multiply;
+  opacity: 0.6;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+  margin: 0;
+  padding: 0;
+  font-weight: bolder;
+}
+body {
+  --primary-color: #00bfa5;
+  --secondary-color: #ff4081;
+  --accent-color: #fdd835;
+}
+button {
+  background-color: var(--accent-color);
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transform: translateY(-3px);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+}
+button:hover{
+  border-color: #fff;
+}
+/* Container styles */
+.registeruser {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border: 2px solid #000;
+  position: relative;
+}
+
+/* Form styles */
+.form-register-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-register-box h3 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 0;
+}
+
+.form-register-box p {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.form-register-box label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-register-box input[type="text"],
+.form-register-box input[type="password"] {
+  width: 95%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-register-box .password-input {
+  position: relative;
+}
+
+.register-btn {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.linkhomepage {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.linkhomepage p {
+  font-size: 14px;
+}
+
+.linkhomepage a {
+  color: #4caf50;
+  text-decoration: none;
+}
+
+.linkhomepage a:hover {
+  text-decoration: underline;
+  color: blue;
+}
+
+.password-input {
+  position: relative;
+}
+
+.repeat-password-input {
+  position: relative;
+}
+
+.password-input input,
+.repeat-password-input input {
+  width: 90%; /* Set the width to 100% to fill the available space */
+  padding-right: 40px; /* Add padding to accommodate the icon */
+}
+.form-register-box .password-input .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  cursor: pointer;
+}
+.password-input .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-80%) translateX(-20px);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  padding: 0px 0;
+  border: none;
+  outline: none;
+  font-size: 28px;
+  background: none; /* Remove the background color */
+  background-color: transparent;
+}
+
+.repeat-password-input .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-80%) translateX(-20px);
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.toggle-password{
+  cursor: pointer;
+  mix-blend-mode: multiply;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Donation Small Organization</title>
+    <link rel="stylesheet" type="text/css" href="addNewDonationSmallOrg.css"/>
+</head>
+<body>
+    <div class="addnewdonation" id="addnewdonation_id">
+        <form action="" method="post" class="form-donation-box">
+            <h2>Add New Donation</h2> 
+            <label for="food-type"><b>Food Type:</b></label>
+            <input type="text" id="food-type" name="foodType">
+            <br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity">
+            <label for="unitofmeasurement">Unit Of Measurement:</label>
+            <br>
+            <select class="main-select" id="chooseunit">
+              <option label=" "></option>
+              <option value="pieces">Pieces</option>
+              <option value="kilograms">Kilograms</option>
+            </select>
+            <br>
+            <button class="add-food-button" id="addfood" type="submit" >Add The Food</button>
+            <br>
+            <button class="popup-button" id="remind" type="button">View And Edit Items </button>
+            <br><br>
+            <button class="back-home" id="backhome" type="submit">Cancel</button>
+            <br><br>
+            <button class="submit-donation" id="submitdonation" type="submit">Save</button>
+        </form>
+      </div>
+      <div class="addpohotfoodtmodal" id="addphotomodal_id">
+        <form action="" class="form-addphoto-modal" id="form-addphoto_id">
+            <p>Do you want to add a picture of the food?</p>
+            <button class="addphotofood-btn-yes" id="addphotofood-yes" type="submit">Yes</button>
+            <button class="addphotofood-btn-no" id="addphotofood-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="pickuppohotfoodtmodal" id="pickuphoto_id">
+        <form class="mt-4" action="/upload" method="POST" enctype="multipart/form-data">
+          <p>Please upload a picture</p>
+          <input class="uploadphoto" type="file" name="photo" id="photo_id" accept="image/*">
+          <button class="canceluploadphoto-btn" id="canceluploadphoto_id" type="submit">Cancel</button>
+          <button class="saveuploadphoto-btn" id="saveuploadphoto_id" type="submit">Save</button>
+          <button class="removephoto-btn" id="removephoto_id" type="submit">Remove</button>
+        </form>
+      </div>
+      <div class="addfoodexistmodal" id="addfoodexistmodal_id">
+        <form action="" class="form-existfood-box" id="form-exist_id">
+            <p>This food type already exists in the report</p>
+            <p>Do you want to add the food to the report?</p>
+            <button class="addfoodexist-btn-yes" id="addfoodexist-yes" type="submit">Yes</button>
+            <button class="addfoodexist-btn-no" id="addfoodexist-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="confirmodal" id="confirmodal_id">
+        <form action="" class="form-confirm-modal">
+            <p>Your donation will be approved</p>
+            <p>Are you sure?</p>
+            <button class="confirm-btn-yes" id="confirmodal-yes" type="submit">Yes</button>
+            <button class="confirm-btn-no" id="confirmodal-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="thanksmodal" id="thanksmodal_id">
+        <form action="" class="form-thanks-modal">
+            <p>The donation was successfully registered</p>
+            <p>Thanks for donating!</p>
+            <P>Do you want return to home page?</P>
+            <button class="thanks-btn-yes" id="thanksmodal-yes" type="submit">Yes</button>
+            <button class="thanks-btn-no" id="thanksmodal-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="cancelmodal" id="cancelmodal_id">
+        <form action="" class="form-return-modal">
+            <p>You will return to the home page and the donation will be deleted</p>
+            <p>Are you sure? </p>
+            <button class="cancel-btn-yes" id="cancelmodal-yes" type="submit">Yes</button>
+            <button class="cancel-btn-no" id="cancelmodal-no" type="submit">No</button>
+        </form>
+      </div>
+    <script src="addNewDonationSmallOrg.js"></script>
+</body>
+</html>

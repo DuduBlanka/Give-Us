@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Donation Small Organization</title>
+    <link rel="stylesheet" type="text/css" href="updateDonationSmallOrg.css"/>
+</head>
+<body>
+    <div class="main-box" id="main-box_id" >
+      <form action="" class="form-main-box" id="form-main_id" method="">
+        <button class="updatefood-btn" id="updatefood_id" type="submit">Update Food</button>
+        <button class="backhome-btn" id="backhome" type="submit">Back</button>
+        <div class="tabledonation" id="tabledonation_id">
+            <div class="table-container">
+              <form action="" class="form-table-box" method="post" id="form-table">
+                  <table class="tableDonation_show" id="tableDonationshow_id">
+                      <thead>
+                          <tr>
+                            <th>Select</th>
+                            <th>Number</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Association</th>
+                            <th>Status</th>
+                            <th>Number of items</th>
+                            <th>Time life</th>
+                          </tr>
+                        </thead>
+                      <tbody id="tableDonationshow_body"></tbody>
+                  </table>
+              </form>
+            </div>
+          </div>
+        </form>
+    </div>
+    <div class="addfooddonationmodal" id="addfooddonation_id">
+      <form action="" class="form-addfooddonation-modal" id="form-addfooddonation">
+          <p>Donation update number-  <span id="donationCount"></span></p>
+          <br>
+          <label for="food-type"><b>Food Type:</b></label>
+          <input type="text" id="food-type" name="foodType">
+          <br><br>
+          <label for="quantity">Quantity:</label>
+          <input type="number" id="quantity" name="quantity">
+          <label for="unitofmeasurement">Unit Of Measurement:</label>
+          <select class="unit-select" id="chooseunit">
+              <option label=" "></option>
+              <option value="pieces">Pieces</option>
+              <option value="kilograms">Kilograms</option>
+          </select>
+          <br><br><br>
+          <button class="addfoodtolist-btn" id="addfoodtolist" type="submit" >Add The Food</button>
+          <br><br>
+          <button class="showitems-btn" id="viewitemstoupdate_id" type="submit">View Items</button>
+          <br><br>
+          <button class="saveupdate-btn" id="saveupdate_id" type="submit">Save</button>
+          <br><br>
+          <button class="closeaddfood-btn" id="closeaddfood" type="submit">Close</button>
+      </form>
+    </div>
+      </form>
+    </div>
+  <div class="confirmdonationmodal" id="confirmdonation_id">
+      <form action="" class="form-confirmdonation-modal" id="form-confirmdonation">
+          <p>The donation will be updated</p>
+          <p>Are you sure?</p>
+          <button class="confirm-btn-yes" id="confirm-yes" type="submit">Yes</button>
+          <button class="confirm-btn-no" id="confirm-no" type="submit">No</button>
+      </form>
+    </div>
+    <div class="returnmodal" id="return_id">
+      <form action="" class="form-return-modal" id="form-return">
+          <p>The donation has been successfully updated</p>
+          <P>Do you want return to home page?</P>
+          <button class="return-btn-yes" id="return-yes" type="submit">Yes</button>
+          <button class="return-btn-no" id="return-no" type="submit">No</button>
+      </form>
+    </div>
+      <script src="updateDonationSmallOrg.js"></script>
+      <script>
+        // Call the displayUser function when the page loads
+        window.addEventListener('load', showAllDonation);
+        //window.addEventListener('load', displayAssociation);
+    </script>
+</body>
+</html>

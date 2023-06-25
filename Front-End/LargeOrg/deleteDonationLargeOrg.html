@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Donation Large Organization</title>
+    <link rel="stylesheet" type="text/css" href="deleteDonationLargeOrg.css"/>
+</head>
+<body>
+    <div class="main-box" id="main-box_id" >
+        <form action="" class="form-main-box" id="form-main_id">
+            <button class="showitems-btn" id="showitems_id" type="submit">Show Items</button>
+            <button class="deletedonation-btn" id="deletedonation_id" type="submit">Delete</button>
+            <button class="backhome-btn" id="backhome_id" type="submit">Back</button>
+            <div class="tabledonation" id="tabledonation_id">
+                <div class="table-container">
+                    <form action="" class="form-table-box" method="post" id="form-table">
+                        <table class="tableDonation_show" id="tableDonationshow_id">
+                            <thead>
+                                <tr>
+                                    <th>Select</th>
+                                    <th>Number</th>
+                                    <th>Date</th>
+                                    <th>Location</th>
+                                    <th>Association</th>
+                                    <th>Status</th>
+                                    <th>Number of items</th>
+                                    <th>Time life</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tableDonationshow_body"></tbody>
+                        </table>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="deletedonationmodal" id="deletedonationmodal_id">
+        <form action="" class="form-finaldeletedonation-modal" id="form-finaldeletedonation">
+            <p>The donation number <span id="donationNumber"> </span> will be deleted</p>
+            <p>Are you sure?</p>
+            <button class="delete-btn-yes" id="delete-yes" type="submit">Yes</button>
+            <button class="delete-btn-no" id="delete-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="choosewhydeletemodal" id="choosewhydeletemodal_id">
+        <form action="" class="form-choosewhydeletemodal-modal" id="form-choosewhydeletemodal">
+            <p>What is the reason for the deletion?</p>
+            <select class="selectreason" id="selectreason_id">
+                <option value="delivered">Delivered</option>
+                <option value="notAvailable">Thrown out</option>
+            </select>
+            <button class="chooseSelect-btn" id="chooseSelect_id" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="chooseassociationmodal" id="chooseassociationmodal_id">
+        <form action="" class="form-chooseassociation-modal" id="form-cchooseassociationmodal_id">
+            <p>Choose who took the donation</p>
+            <select class="selectassociation" id="selectassociation_id">
+            </select>
+            <button class="chooseSelectAssociation-btn" id="chooseSelectAssociation_id" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="returnmodal" id="returnmodal_id">
+        <form action="" class="form-return-modal" id="form-return_id">
+            <p>The donation has been successfully deleted</p>
+            <P>Do you want return to home page?</P>
+            <button class="return-btn-yes" id="return-yes" type="submit">Yes</button>
+            <button class="return-btn-no" id="return-no" type="submit">No</button>
+        </form>
+      </div>
+    <script src="deleteDonationLargeOrg.js"></script>
+    <script>
+        // Call the displayUser function when the page loads
+        window.addEventListener('load', showAllDonation);
+        window.addEventListener('load', displayAllAssociation);
+    </script>
+</body>
+</html>

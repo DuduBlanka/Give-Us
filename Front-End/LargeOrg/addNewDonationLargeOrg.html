@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Donation</title>
+    <link rel="stylesheet" type="text/css" href="addNewDonationLargeOrg.css"/>
+</head>
+<body>
+    <div class="addnewdonation" id="addnewdonation_id">
+        <form action="" method="post" class="form-donation-box">
+            <h2>Add New Donation</h2> 
+            <label for="food-type"><b>Food Type:</b></label>
+            <input type="text" id="food-type" name="foodType">
+            <br>
+            <label for="quantity">Quantity:</label>
+            <input type="number" id="quantity" name="quantity">
+            <br>
+            <label for="unitofmeasurement">Unit Of Measurement:</label>
+            <select class="main-select" id="chooseunit">
+                <option label=" "></option>
+                <option value="pieces">Pieces</option>
+                <option value="kilograms">Kilograms</option>
+            </select>
+            <br><br>
+            <button class="add-food-button" id="addfood" type="submit" >Add The Food</button>
+            <br><br>
+            <button class="popup-button" id="remind" type="button">View And Edit Items </button>
+            <br><br>
+            <button class="back-home" id="backhome" type="submit">Cancel</button>
+            <br><br>
+            <button class="submit-donation" id="submitdonation" type="submit">Submit</button>
+        </form>
+      </div>
+      <div class="addfoodexistmodal" id="addfoodexistmodal_id">
+        <form action="" class="form-existfood-modal">
+            <p>This food type already exists in the report</p>
+            <p>Do you want to add the food to the report?</p>
+            <button class="addfoodexist-btn-yes" id="addfoodexist-yes" type="submit">Yes</button>
+            <button class="addfoodexist-btn-no" id="addfoodexist-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="confirmodal" id="confirmodal_id">
+        <form action="" class="form-confirm-modal">
+            <p>Your donation will be approved</p>
+            <p>Are you sure?</p>
+            <button class="confirm-btn-yes" id="confirmodal-yes" type="submit">Yes</button>
+            <button class="confirm-btn-no" id="confirmodal-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="thanksmodal" id="thanksmodal_id">
+        <form action="" class="form-thanks-modal">
+            <p>The donation was successfully registered</p>
+            <p>Thanks for donating!</p>
+            <P>Do you want return to home page?</P>
+            <button class="thanks-btn-yes" id="thanksmodal-yes" type="submit">Yes</button>
+            <button class="thanks-btn-no" id="thanksmodal-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="chooseassociationmodal" id="chooseassociationmodal_id">
+        <form action="" class="form-chooseassociation-modal">
+          <p>Do you want to choose an association to donate to?</p>
+          <button class="choose-btn-yes" id="chooseassociation-yes" type="submit">Yes</button>
+          <button class="choose-btn-no" id="chooseassociation-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="pickupmodal" id="pickupmodal_id">
+        <form action="" class="form-pickup-modal">
+          <label for="chooseassociation">Choose An Association:</label>
+          <br><br>
+          <select class="chooseAssociation" id="chooseassociation">
+          </select>
+          <button class="choose-btn" id="choosepickup_id" type="submit">Choose</button>
+        </form>
+      </div>
+      <div class="pickupcontactman" id="pickupcontactman_id">
+        <form action="GET" class="form-pickupcontactman-modal">
+          <h3>Selelct Contact Men</h3>
+          <table class="contact-man-table" id="contactManTable" >
+            <thead>
+              <tr>
+                <th>Select</th>
+                <th>Name</th>
+              </tr>
+            </thead>
+            <tbody id="contactManList" class="contact-man-list"></tbody>
+          </table>
+          <button class="selectContactMen-yes-btn" id="selectContactMen-yes_id" type="submit">Select Contact Men</button>
+          <button class="selectContactMen-no-btn" id="selectContactMen-no_id" type="submit">Exit</button>
+        </form>
+      </div>
+      <div class="cancelmodal" id="cancelmodal_id">
+        <form action="" class="form-return-box">
+            <p>You will return to the home page and the donation will be deleted</p>
+            <p>Are you sure? </p>
+            <button class="cancel-btn-yes" id="cancelmodal-yes" type="submit">Yes</button>
+            <button class="cancel-btn-no" id="cancelmodal-no" type="submit">No</button>
+        </form>
+      </div>
+    <script src="addNewDonationLargeOrg.js"></script>
+    <script>
+      // Call the displayUser function when the page loads
+      window.addEventListener('load', displayAssociation);
+      window.addEventListener('load', displayContactMen);
+  </script>
+</body>
+</html>

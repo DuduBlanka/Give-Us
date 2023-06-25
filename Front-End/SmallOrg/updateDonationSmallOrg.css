@@ -1,0 +1,460 @@
+
+/* Global styles */
+body::before {
+    content: "";
+    position: fixed; /* Change to fixed position to cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Update to 100% to cover the entire page */
+    background-image: url("../Images/giveuslogo.jpg");
+    background-size: 100; /* Use 'cover' to scale and cover the entire background */
+    background-position: center top;
+    mix-blend-mode: multiply;
+    opacity: 0.6;
+  }
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+body {
+    --primary-color: #00bfa5;
+    --secondary-color: #ff4081;
+    --accent-color: #fdd835;
+  }
+button {
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease;
+    color: #fff;
+    font-weight: bold;
+}
+button:hover{
+    border-color: #fff;
+}
+p{
+    font-size: 18px;
+    transform: translateY(-30px);
+}
+/* Main box */
+.main-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; 
+}
+/* Form inside main box */
+.form-main-box {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 2px solid #000;
+    position: relative;
+    background-color: #fff;
+}
+
+.backhome-btn {
+    background-color: var(--secondary-color);
+    margin-left: 72px;
+  }
+  
+.showcontactmanmodal {
+    display: none;
+    width: 600px;
+    height: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 8px;
+    border: 2px solid #000;
+  }
+  
+.form-showcontactman-modal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.form-showcontactman-modal p {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.changecontactman-btn,
+.closecontactman-btn {
+    color: #fff;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+  }
+.changecontactman-btn{
+    background-color: #4caf50;
+}
+
+.closecontactman-btn{
+    background-color: #f44336;
+}
+
+.contact-man-table-show {
+    width: auto;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.contact-man-table-show th,
+.contact-man-table-show td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.contact-man-table-show th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
+.pickupcontactman {
+    display: none;
+    width: 450px;
+    height: auto;
+    background-color: #fff;
+    transform: translate(30%, -150%);
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    border: 2px solid #000;
+}
+.selectContactMen-yes-btn{
+    background-color: #4caf50;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(50px);
+  }
+  .selectContactMen-no-btn{
+    background-color: #f44336;
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 320px;
+    transform: translateY(10px)translateX(35px);
+  }
+.pickupcontactman p{
+    text-align: center;
+}
+/* Option Association modal */
+.optionAssociationmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 400px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #000;
+}
+  
+.form-optionAssociation-modal {
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+.association-select{
+    width: 40%;
+    padding: 6px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border:3px solid #ccc;
+    font-size: 20px;
+}
+.association-select p{
+    text-align: center;
+
+}
+/* Add Food Donation modal */
+.addfooddonationmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 500px;
+    height: 620px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+    max-width: 400px;
+    margin: 0 auto;
+    border: 2px solid #000;
+}
+  
+.form-addfooddonation-modal {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.saveupdate-btn{
+    background-color: #4caf50;
+    transform: translateX(-150px)translateY(6px);
+}
+.closeaddfood-btn{
+    background-color: #f44336;
+    transform: translateX(150px)translateY(-70px);
+}
+.confirm-btn-yes{
+    background-color: #4caf50;
+    transform: translateY(-10px)translateX(-150px);
+}
+.confirm-btn-no{
+    background-color: #f44336;
+    transform: translateY(-10px)translateX(150px);
+}
+/* "No" or "Exit" button style */
+.return-btn-yes{
+    background-color: #4caf50;
+    transform: translateY(-15px)translateX(-160px);
+}
+.return-btn-no {
+    background-color: #f44336;
+    transform: translateY(-15px)translateX(160px);
+}
+.form-addfooddonation-modal label {
+    display: block;
+    margin-bottom: 5px;
+}
+.chooseassociation-btn{
+    background-color: #4caf50;
+    transform: translateY(-3px);
+}
+.closechooseassociation-btn{
+    background-color: #f44336;
+    transform: translateY(-3px);
+}
+.form-addfooddonation-modal input,
+.form-addfooddonation-modal select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+  
+.form-addfooddonation-modal button {
+    margin-top: 10px;
+}
+  
+/* Confirm Donation modal */
+.confirmdonationmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 500px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -80%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid #000;
+}
+  
+.form-confirmdonation-modal {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+  
+/* Return modal */
+.returnmodal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    width: 500px;
+    height: 150px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    max-width: 500px;
+    margin: 0 auto;
+    border: 2px solid #000;
+}
+  
+.form-return-modal {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+  
+@keyframes blink {
+    0% {
+      border-color: transparent;
+    }
+    50% {
+      border-color: white;
+    }
+    100% {
+      border-color: transparent;
+    }
+}
+
+/* Style the table container */
+.table-container {
+    max-height: 400px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 20px;
+    transform: translateX(0px);
+    width: 1100px;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    align-items: center; /* Updated to center vertically */
+    justify-content: center; /* Added to center horizontally */
+    margin: 20px auto; /* Updated to center horizontally */
+  }
+.tableDonation_show {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tableDonation_show th,
+  .tableDonation_show td {
+    padding: 15px;
+    text-align: center;
+    border: 1px solid #ccc;
+  }
+  
+  .tableDonation_show th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+    color: #333;
+}
+  
+/* Responsive styles */
+@media (max-width: 768px) {
+  .table-container {
+      width: 100%;
+      margin: 10px;
+      border-radius: 0;
+}
+  
+.tableDonation_show th,
+.tableDonation_show td {
+    padding: 8px;
+}
+}
+table {
+    width: 40%;
+    border-collapse: collapse;
+  }
+  
+  table thead {
+    background-color: #f1f1f1;
+  }
+  
+  table th,
+  table td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th:first-child,
+  table td:first-child {
+    padding-left: 16px;
+  }
+  
+  table th:last-child,
+  table td:last-child {
+    padding-right: 16px;
+  }
+  
+  .contact-man-table {
+    margin-bottom: 10px;
+  }
+  
+  .contact-man-table th {
+    font-weight: bold;
+  }
+  
+  .contact-man-table td:first-child {
+    width: 50px;
+    text-align: center;
+  }
+  
+  .contact-man-table td:last-child {
+    width: 80%;
+  }
+  
+  .contact-man-table input[type="checkbox"] {
+    margin-right: 5px;
+  }
+  
+  .contact-man-table input[type="checkbox"]:checked + span {
+    font-weight: bold;
+  }
+  
+  .contact-man-list {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  

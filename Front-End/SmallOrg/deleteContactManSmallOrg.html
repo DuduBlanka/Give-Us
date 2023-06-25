@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Contact Man Small Organization</title>
+    <link rel="stylesheet" href="deleteContactManSmallOrg.css">
+</head>
+<body>
+    <div class="currentcontactdetails" id="currenruserdetails_id">
+        <form action="" method="get" class="form-details-box" id="form-details_id">
+            <h2>Current Contact Man Details</h2>
+            <br><br>
+            <p>Full Name: <span id="user-name"></span></p>
+            <br>
+            <p>Phone: <span id="user-phone"></span></p>
+            <br>
+            <p>Role: <span id="user-rule"></span></p>
+            <br><br>
+            <div class=choosecontactman-select id="choosecontactman_id">
+                <label for="choosecontactman">Choose Contact Man:</label>
+                <select class="contactman-select" id="contactmanselect_id">
+                </select>
+                <button class="choosecontactman-btn" id="choosecontact" type="submit">Submit</button>
+                <button class="reset-btn" id="reset" type="submit">Reset</button>
+                <button class="deletecontactman-btn" id="deletecontactman" type="submit">Delete</button>
+                <button class="backhome-btn" id="backhome" type="submit">Back</button>
+            </div>
+        </form>
+    </div>
+    <div class="deletecontactmanmodal" id="deletcontactman_id">
+        <form action="" class="form-deletecontactman-modal" id="form-deletecontactman_id">
+            <p>The contact man <span id="contactManName"></span> will be deleted</p>
+            <br>
+            <p>Are you sure?</p>
+            <button class="delete-btn-yes" id="delete-yes" type="submit">Yes</button>
+            <button class="delete-btn-no" id="delete-no" type="submit">No</button>
+        </form>
+      </div>
+      <div class="returnmodal" id="returnmodal_id">
+        <form action="" class="form-return-box" id="form-return_id">
+            <p>The contact man has been successfully deleted</p>
+            <br>
+            <P>Do you want return to home page?</P>
+            <button class="return-btn-yes" id="return-yes" type="submit">Yes</button>
+            <button class="return-btn-no" id="return-no" type="submit">No</button>
+        </form>
+      </div>
+    <script src="deleteContactManSmallOrg.js"></script>
+    <script>
+        // Call the displayUser function when the page loads
+        window.addEventListener('load', selectShowUpContactMan);
+    </script>
+</body>
+</html>

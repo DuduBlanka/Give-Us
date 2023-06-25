@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"></head>
+            <title>Register Large Organizations</title>
+            <link rel="stylesheet" href="registerLargeOrg.css">
+        </head>
+    <body>
+      <!-- class named "container" is assigned to div -->
+      <div class="registeruser" id="registeruser_id">
+        <form action="" method="post" class="form-register-box" id="form-register_id">
+          <h3>Register- Large Organizations</h3>
+          <p>Kindly fill in this form to register.</p>
+          <label for="name_for"><b>Name Of Organization</b></label>
+            <input
+              type="text"
+              placeholder="Enter Full Name"
+              name="fullname"
+              id="Fullname_id"
+              required
+            />
+            <br>
+            <label for="email_for"><b>Email</b></label>
+            <input
+              type="text"
+              placeholder="Enter Email"
+              name="email"
+              id="Email_id"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Enter Email Again"
+              name="repeatemail"
+              id="RepeatEmail_id"
+              required
+            />
+            <br>
+            <label for="phoneNumber_for"><b>Phone Number</b></label>
+            <input
+              type="text"
+              placeholder="Enter Phone Number"
+              name="phoneNumber"
+              id="PhoneNumber_id"
+              required
+            />
+            <input
+              type="text"
+              placeholder="Enter Phone Number Again"
+              name="repeatphoneNumber"
+              id="RepeatPhoneNumber_id"
+              required
+            />
+            <br>
+            <label for="address_for"><b>Address</b></label>
+            <input
+              type="text"
+              placeholder="Enter Address"
+              name="address"
+              id="Address_id"
+              required
+            />
+            <label for="city_for"><b>City</b></label>
+            <input
+              type="text"
+              placeholder="Enter City"
+              name="city"
+              id="City_id"
+              required
+            />
+            <br>
+            <label for="Type_for"><b>Type</b></label>
+            <input 
+              type="text" 
+              id="type" 
+              value="Large Organization" 
+              readonly
+            />
+            <br>
+            <label for="pwd_for"><b>Password</b></label>
+              <div class="password-input">
+              <input 
+                type="password"
+                placeholder="Enter Password"
+                name="pwd"
+                id="pwd_id"
+                required
+              />
+            <img src="../Images/eye-close.png" alt="Show Password" id="toggleButton" class="toggle-password">
+            </div>
+              <div class="repeat-password-input">
+              <input
+                type="password"
+                placeholder="Repeat Password"
+                name="pwd-repeat"
+                id="pwd-repeat_id"
+                required
+              />
+              <img src="../Images/eye-close.png" alt="Show Password" id="toggleButtonRepeat" class="toggle-password">
+              </div>
+              <br><br>
+              <button class="register-btn" id="register" type="submit">Register</button>
+              <br>
+      <div class="linkhomepage">
+        <p>Already have an account? <a href="../General/homePage.html">Log in</a>.</p>
+      </div>
+      </form>
+    </div>
+    <script src="registerLargeOrg.js"></script>
+  </body>
+</html>
